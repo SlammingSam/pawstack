@@ -10,14 +10,14 @@ A stack-based, concatenative programming language with a dog-themed twist. Push 
 ## Getting Started
 
 ```bash
-python pawstack.py your_program.paw
+python pawstack.py your_program.owoof
 ```
 
 Enable debug mode to print the stack after every operation:
 
 ```bash
 # Set is_debug = True in pawstack.py, then run normally
-python pawstack.py your_program.paw
+python pawstack.py your_program.owoof
 ```
 
 ---
