@@ -2,7 +2,7 @@ README written with Claude
 
 # 🐾 PawStack
 
-A stack-based, concatenative programming language with a cat-themed twist. Push values, chain operations, and let the stack do the thinking.
+A stack-based, concatenative programming language with a dog-themed twist. Push values, chain operations, and let the stack do the thinking.
 
 ---
 
