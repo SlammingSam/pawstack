@@ -4,7 +4,6 @@ import shlex
 def run(code, debug):
     stack = []
     words = shlex.split(code)
-    print(words)
     VALID_OPS = ["%", ">", "<", "==", "+", "-", "*", "/", 
                  "repeat", "lower", 
                  "int", "str", "float", 
@@ -12,8 +11,9 @@ def run(code, debug):
                  "pop-all", "rev"]
 
     for word in words:
-        # numbers
-        if word.replace('.', '', 1).isdigit():
+        # checks if number, if not, checks if operator
+        # the replace also removes the decimal for float so it can be seen as a number
+        if word.replace('.', '', 1).isdigit():  
             stack.append(float(word))
 
         # operations / keywords
@@ -24,6 +24,7 @@ def run(code, debug):
                 a = stack.pop()
                 stack.append(a + b)
 
+            # do I really need to explain basic math? 
             elif word == "-":
                 b = stack.pop()
                 a = stack.pop()
@@ -60,7 +61,7 @@ def run(code, debug):
 
                 a = int(a)
                 b = int(b)
-                stack.append(a % b) # modulus operator
+                stack.append(a % b) # modulus, gets the remainder
 
             elif word == "in": # user input
                 user_input = input()
@@ -87,17 +88,10 @@ def run(code, debug):
                 value = stack.pop()
                 stack.append(str(value).lower())
 
-            elif word == "yip": # print top of stack and pop it
-                print(stack.pop())
-            
-            elif word == "eat": # pop top of stack and discard it
-                stack.pop()
-
-            elif word == "paw-at": # print top of stack without popping it
-                print(stack[-1])
-            
-            elif word == "dup": # duplicate top of stack
-                stack.append(stack[-1])
+            elif word == "yip": print(stack.pop()) # print top of stack and pop it
+            elif word == "eat": stack.pop() # pop top of stack and discard it
+            elif word == "paw-at": print(stack[-1]) # print top of stack without popping it
+            elif word == "dup": stack.append(stack[-1]) # duplicate top of stack
 
             elif word == "pop-all": # dig up pops all values and prints them
                 print("Popping all values:")
