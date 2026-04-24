@@ -1,0 +1,5 @@
+"Enter num to check if odd or even (true = even, odd = false)" yip
+in
+2 %
+0 ==
+yip

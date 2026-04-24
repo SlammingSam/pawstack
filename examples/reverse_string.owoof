@@ -1,0 +1,8 @@
+"Enter string to reverse" yip
+
+in 
+dup
+"" yip
+"Reversed string of " yip yip
+
+rev yip

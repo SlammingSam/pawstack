@@ -1,0 +1,9 @@
+"== Multiply ==" yip
+"Num 1: " yip
+in float
+
+"Num 2: " yip
+in float
+*
+
+"Multiplied number: " yip yip

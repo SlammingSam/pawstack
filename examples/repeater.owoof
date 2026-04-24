@@ -1,0 +1,10 @@
+"== String repeater ==" yip
+"Enter String to Repeat" yip
+in str
+
+"Enter Num of Times to Repeat" yip
+in int
+
+"Repeated string: " yip
+repeat
+yip

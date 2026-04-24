@@ -1,0 +1,6 @@
+"Palendrome checker" yip
+in str
+dup
+rev
+==
+yip
