@@ -66,10 +66,9 @@ def run(code, debug):
             elif word == "in": # user input
                 user_input = input()
 
-                if user_input.isdigit(): # check if it's an integer
-                    user_input = int(user_input)
-                elif user_input.replace('.', '', 1).isdigit(): # check if it's a float
-                    user_input = float(user_input)
+                if user_input.isdigit(): user_input = int(user_input) # check if it's an integer 
+                elif user_input.replace('.', '', 1).isdigit(): user_input = float(user_input)  # check if it's a float
+                
                 stack.append(user_input)
 
             elif word == "int": # convert top of stack to int
@@ -95,8 +94,7 @@ def run(code, debug):
 
             elif word == "pop-all": # dig up pops all values and prints them
                 print("Popping all values:")
-                while stack:
-                    print(stack.pop())
+                while stack: print(stack.pop())
 
             elif word == "rev":
                 s = stack.pop()  # pop string off
@@ -112,8 +110,7 @@ def run(code, debug):
                 value = stack.pop()
                 stack.append(value * count) # repeat the value 'count' times and push the result back onto the stack
 
-        else:
-            stack.append(word)
+        else: stack.append(word)
         if debug:
             print(f"{word:>10} -> {stack}")
 
@@ -121,6 +118,5 @@ if __name__ == "__main__":
     is_debug = False
 
     filename = sys.argv[1]
-    with open(filename, "r") as f:
-        code = f.read()
+    with open(filename, "r") as f: code = f.read()
     run(code, is_debug)
