@@ -1,4 +1,5 @@
 README written with Claude
+(because writing readme is a pain)
 
 # 🐾 PawStack
 
