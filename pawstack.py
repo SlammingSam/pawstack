@@ -4,11 +4,12 @@ import shlex
 def run(code, debug):
     stack = []
     words = shlex.split(code)
+    print(words)
     VALID_OPS = ["%", ">", "<", "==", "+", "-", "*", "/", 
                  "repeat", "lower", 
                  "int", "str", "float", 
                  "in", "yip", "eat", "paw-at", "dup", 
-                 "pop-all", "bury", "dig", "rev"]
+                 "pop-all", "rev"]
 
     for word in words:
         # numbers
